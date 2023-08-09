@@ -1,0 +1,19 @@
+To assign a root user password with Linux Mint use this command:
+
+"sudo mysql -u root"
+
+At the mysql> prompt see what is the authentication.
+
+"SELECT user,host,authentication_string,plugin FROM mysql.user WHERE user='root';"
+
+To change root to password authentication — change the ‘password’ at the end to your actual password within the quotes.
+
+"ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY 'password';"
+
+You should execute FLUSH PRIVILEGES after making manual edits to tables such as MySQL.
+
+"FLUSH PRIVILEGES;"
+
+Then just Quit.
+
+"quit"
