@@ -22,6 +22,7 @@ sudo apt install -y \
 "php${PHP_VERSION}-opcache" \
 "php${PHP_VERSION}-intl" \
 "php${PHP_VERSION}-zip" \
+"php${PHP_VERSION}-gd"
 "libapache2-mod-php{PHP_VERSION}"
 success 'Done.'
 linefeed
